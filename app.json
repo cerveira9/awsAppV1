@@ -1,15 +1,27 @@
 {
   "expo": {
-   "name": "Cloud Mining Manager",
-   "icon": "/Volumes/HDD/Code/TRABALHOS/awsv1/src/img/apple-touch-icon-120x120.png",
-   "version": "1.0.0",
-   "slug": "CMM",
-   "sdkVersion": "26.0.0",
-   "ios": {
-     "bundleIdentifier": "com.appteste.cloudminingmanager"
-   },
-   "android": {
-     "package": "com.appteste.cloudminingmanager"
-   }
+    "name": "awsv1",
+    "description": "This project is really great.",
+    "slug": "awsv1",
+    "privacy": "public",
+    "sdkVersion": "27.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
   }
 }
