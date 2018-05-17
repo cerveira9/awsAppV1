@@ -1,21 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import firebase from 'firebase';
+import ReduxThunk from 'redux-thunk';
+import reducers from './src/reducers';
+import Router from './src/Router';
+
 
 export default class App extends React.Component {
+  componentWillMount() {
+    const config = {
+      apiKey: 'AIzaSyAeiQTWcuydOe4gx4iXHMn2G7Fynd2i2xs',
+      authDomain: 'manager-806fd.firebaseapp.com',
+      databaseURL: 'https://manager-806fd.firebaseio.com',
+      projectId: 'manager-806fd',
+      storageBucket: 'manager-806fd.appspot.com',
+      messagingSenderId: '239449481770'
+    };
+    firebase.initializeApp(config);
+  }
+
   render() {
+    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <Provider store={store}>
+        <Router />
+      </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
