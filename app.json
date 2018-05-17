@@ -1,5 +1,15 @@
 {
   "expo": {
-    "sdkVersion": "26.0.0"
+   "name": "Cloud Mining Manager",
+   "icon": "/Volumes/HDD/Code/TRABALHOS/awsv1/src/img/apple-touch-icon-120x120.png",
+   "version": "1.0.0",
+   "slug": "CMM",
+   "sdkVersion": "26.0.0",
+   "ios": {
+     "bundleIdentifier": "com.appteste.cloudminingmanager"
+   },
+   "android": {
+     "package": "com.appteste.cloudminingmanager"
+   }
   }
 }
