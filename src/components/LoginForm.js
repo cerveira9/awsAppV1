@@ -62,10 +62,10 @@ class LoginForm extends Component {
                     <Header
                         centerComponent={{ text: 'LOGIN', style: { color: '#fff', fontSize: 18, fontWeight: 'bold' } }}
                     />
-                    <Image
+                    {/* <Image
                         style={styles.imgStyle}
                         source={{ uri: '/Volumes/HDD/Code/React-Native/ESTUDOS/TRABALHOS/manager/src/img/LOGO.png' }}
-                    />
+                    /> */}
                     <Card>
                         <CardItem>
                             <Input
