@@ -99,7 +99,7 @@ class ContratosScreen extends Component {
                 </Card>
                 <View style={styles.buttonContainer}>
                     <Button
-                        title="CONTRATOS"
+                        title="ADICIONAR"
                         titleStyle={{ fontWeight: 'bold' }}
                         buttonStyle={{
                             backgroundColor: "rgba(92, 99,216, 1)",
