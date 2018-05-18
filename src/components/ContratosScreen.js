@@ -4,14 +4,18 @@ import {
     View,
     StyleSheet,
     Image,
-    ScrollView
+    Dimensions
 } from 'react-native';
 import {
     Header,
     Button,
     ListItem
 } from 'react-native-elements';
-import Card from '../common/Card';
+import CardItem from '../common/CardItem';
+import Input from '../common/Input';
+import ListaContratos from './ListaContratos';
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class ContratosScreen extends Component {
 
@@ -23,80 +27,15 @@ class ContratosScreen extends Component {
                     centerComponent={{ text: 'CONTRATOS', style: { color: 'rgba(92, 99,216, 1)', fontSize: 20, fontWeight: 'bold' } }}
                     leftComponent={{ icon: 'keyboard-arrow-left', color: 'rgba(92, 99,216, 1)' }}
                 />
-                <Card>
-                    <ScrollView
-
-                    >
-                        <ListItem
-                            title='(DATE)'
-                            subtitle={
-                                <View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>Valor: (Value)</Text>
-                                    </View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>Descrição: (Description)</Text>
-                                    </View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>CMP: (CMP)</Text>
-                                    </View>
-                                </View>
-
-                            }
-                        />
-                        <ListItem
-                            title='(DATE)'
-                            subtitle={
-                                <View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>Valor: (Value)</Text>
-                                    </View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>Descrição: (Description)</Text>
-                                    </View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>CMP: (CMP)</Text>
-                                    </View>
-                                </View>
-
-                            }
-                        />
-                        <ListItem
-                            title='(DATE)'
-                            subtitle={
-                                <View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>Valor: (Value)</Text>
-                                    </View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>Descrição: (Description)</Text>
-                                    </View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>CMP: (CMP)</Text>
-                                    </View>
-                                </View>
-
-                            }
-                        />
-                        <ListItem
-                            title='(DATE)'
-                            subtitle={
-                                <View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>Valor: (Value)</Text>
-                                    </View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>Descrição: (Description)</Text>
-                                    </View>
-                                    <View style={styles.subtitleView}>
-                                        <Text style={styles.ratingText}>CMP: (CMP)</Text>
-                                    </View>
-                                </View>
-
-                            }
-                        />
-                    </ScrollView>
-                </Card>
+                <View style={styles.listaStyle}>
+                    <ListaContratos />
+                </View>
+                <CardItem style={styles.cardItemStyle}>
+                    <Input 
+                        label='Valor do Contrato: U$'
+                        placeholder='40'
+                    />
+                </CardItem>
                 <View style={styles.buttonContainer}>
                     <Button
                         title="ADICIONAR"
@@ -118,6 +57,10 @@ class ContratosScreen extends Component {
 }
 
 styles = StyleSheet.create({
+    listaStyle: {
+        height: 350,
+        width: SCREEN_WIDTH
+    },
     subtitleView: {
         flexDirection: 'row',
         paddingLeft: 10,
@@ -128,13 +71,17 @@ styles = StyleSheet.create({
         width: 100
     },
     buttonContainer: {
-        paddingTop: 25,
+        paddingTop: 40,
         alignItems: 'center',
         justifyContent: 'center',
     },
     ratingText: {
         paddingLeft: 10,
         color: 'grey'
+    },
+    cardItemStyle: {
+        paddingTop: 40,
+
     }
 })
 
