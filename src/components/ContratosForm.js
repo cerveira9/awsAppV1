@@ -4,10 +4,11 @@ import {
     View,
     Picker,
     DatePickerIOS,
+    ScrollView,
+    TextInput
 } from 'react-native';
 import {
     Header,
-    Button,
     ListItem
 } from 'react-native-elements';
 import CardItem from '../common/CardItem';
@@ -27,42 +28,49 @@ class ContratosForm extends Component {
 
     render() {
         return (
-                <View>
-                    <Text style={styles.datePickerTextStyle}>Selecione a Data:</Text>
-                    <CardItem>
-                        <View style={styles.container}>
-                            <DatePickerIOS
-                                date={this.state.chosenDate}
-                                onDateChange={this.setDate}
-                            />
-                        </View>
-                    </CardItem>
+            <ScrollView>
+                <CardItem>
+                    <Text style={styles.textStyle}>Valor U$:</Text>
+                    <TextInput
+                        keyboardType="numeric"
+                        placeholder="2,56 ou 2.56"
+                        style={{ height: 40, width: 200, paddingLeft: 20 }}
+                    />
+                </CardItem>
 
-                    <CardItem>
-                        <Input
-                            label="Valor"
-                            placeholder="2,43 ou 2.43"
+                <CardItem>
+                    <Text style={styles.textStyle}>CMP:</Text>
+                    <TextInput
+                        keyboardType="numeric"
+                        placeholder="0,5 ou 0.5"
+                        style={{ height: 40, width: 200, paddingLeft: 20 }}
+                    />
+                </CardItem>
 
+                <Text style={styles.datePickerTextStyle}>Selecione a Data:</Text>
+                <CardItem>
+                    <View style={styles.container}>
+                        <DatePickerIOS
+                            mode="date"
+                            date={this.state.chosenDate}
+                            onDateChange={this.setDate}
                         />
-                    </CardItem>
+                    </View>
+                </CardItem>
 
-                    <CardItem style={{ flexDirection: 'column' }}>
-                        <Text style={styles.pickerTextStyle}>Descrição</Text>
-                        <Picker>
-                            <Picker.Item label="Bônus de Mineração" value="Bônus_de_Mineração" />
-                            <Picker.Item label="Bônus Residual" value="Bônus_Residual" />
-                            <Picker.Item label="Bônus de" value="Bônus_de_Equipe" />
-                            <Picker.Item label="Bônus de" value="Bônus_de_Aceleração" />
-                            <Picker.Item label="Valor Total" value="Valor_Total" />
-                        </Picker>
-                    </CardItem>
-                    <CardItem>
-                        <Input
-                            label="CMP"
-                            placeholder="0.5"
-                        />
-                    </CardItem>
-                </View>
+                <CardItem style={{ flexDirection: 'column' }}>
+                    <Text style={styles.pickerTextStyle}>Descrição:</Text>
+                    <Picker
+                        mode="dropdown"
+                    >
+                        {/* <Picker.Item label="Bônus de Mineração" value="Bônus_de_Mineração" />
+                        <Picker.Item label="Bônus Residual" value="Bônus_Residual" />
+                        <Picker.Item label="Bônus de Equipe" value="Bônus_de_Equipe" />
+                        <Picker.Item label="Bônus de Aceleração" value="Bônus_de_Aceleração" /> */}
+                        <Picker.Item label="Valor Total" value="Valor_Total" />
+                    </Picker>
+                </CardItem>
+            </ScrollView>
         );
     }
 }
@@ -80,6 +88,11 @@ const styles = {
         paddingTop: 15,
         fontSize: 18,
         paddingLeft: 20
+    },
+    textStyle: {
+        fontSize: 18,
+        paddingLeft: 20,
+        paddingTop: 10
     }
 };
 

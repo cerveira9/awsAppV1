@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import {
-    Text,
     View,
     StyleSheet,
-    Image,
     Dimensions
 } from 'react-native';
 import {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
     View,
-    ScrollView
+    Dimensions,
 } from 'react-native';
 import {
     Header,
@@ -9,6 +9,7 @@ import {
 } from 'react-native-elements';
 import ContratosForm from './ContratosForm';
 
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class AdicionarContratosScreen extends Component {
     render() {
@@ -19,9 +20,9 @@ class AdicionarContratosScreen extends Component {
                     centerComponent={{ text: 'ADICIONAR', style: { color: 'rgba(92, 99,216, 1)', fontSize: 20, fontWeight: 'bold' } }}
                     leftComponent={{ icon: 'keyboard-arrow-left', color: 'rgba(92, 99,216, 1)' }}
                 />
-                <ScrollView>
+                <View style={styles.contratosFormStyle}>
                     <ContratosForm />
-                </ScrollView>
+                </View>
                 <View style={styles.buttonContainer}>
                     <Button
                         title="ADICIONAR"
@@ -51,6 +52,10 @@ const styles = {
     pickerTextStyle: {
         fontSize: 18,
         paddingLeft: 20
+    },
+    contratosFormStyle: {
+        height: 450,
+        width: SCREEN_WIDTH
     }
 };
 
