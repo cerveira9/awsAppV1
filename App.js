@@ -10,7 +10,7 @@ import ListaContratos from './src/components/ListaContratos';
 export default class App extends React.Component {
   render() {
     return (
-      <EditarContratosScreen />
+      <FirstScreen />
     );
   }
 }
