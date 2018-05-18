@@ -54,7 +54,6 @@ const styles = {
         paddingLeft: 20
     },
     contratosFormStyle: {
-        height: 450,
         width: SCREEN_WIDTH
     }
 };
