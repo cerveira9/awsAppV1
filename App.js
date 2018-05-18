@@ -5,11 +5,12 @@ import ContratosScreen from './src/components/ContratosScreen';
 import AdicionarContratosScreen from './src/components/AdicionarContratosScreen';
 import ContratosForm from './src/components/ContratosForm';
 import EditarContratosScreen from './src/components/EditarContratosScreen';
+import ListaContratos from './src/components/ListaContratos';
 
 export default class App extends React.Component {
   render() {
     return (
-      <EditarContratosScreen />
+      <ContratosScreen />
     );
   }
 }
