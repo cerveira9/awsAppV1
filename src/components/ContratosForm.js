@@ -6,6 +6,8 @@ import {
     DatePickerIOS,
     ScrollView,
     TextInput,
+    Platform,
+    PickerIOS
 } from 'react-native';
 import {
     Header,
@@ -77,7 +79,16 @@ class ContratosForm extends Component {
 
                 <CardItem style={{ flexDirection: 'column' }}>
                     <Text style={styles.pickerTextStyle}>Descrição:</Text>
-                    <Picker
+                    {
+                        (Platform.OS === 'ios') ? <Picker
+                        mode="dropdown"
+                    >
+                        {/* <Picker.Item label="Bônus de Mineração" value="Bônus_de_Mineração" />
+                        <Picker.Item label="Bônus Residual" value="Bônus_Residual" />
+                        <Picker.Item label="Bônus de Equipe" value="Bônus_de_Equipe" />
+                        <Picker.Item label="Bônus de Aceleração" value="Bônus_de_Aceleração" /> */}
+                        <Picker.Item label="Valor Total" value="Valor_Total" />
+                    </Picker> : <Picker
                         mode="dropdown"
                     >
                         {/* <Picker.Item label="Bônus de Mineração" value="Bônus_de_Mineração" />
@@ -86,6 +97,8 @@ class ContratosForm extends Component {
                         <Picker.Item label="Bônus de Aceleração" value="Bônus_de_Aceleração" /> */}
                         <Picker.Item label="Valor Total" value="Valor_Total" />
                     </Picker>
+                    }
+
                 </CardItem>
             </ScrollView>
         );
