@@ -5,12 +5,13 @@ import {
     Picker,
     DatePickerIOS,
     ScrollView,
-    TextInput
+    TextInput,
 } from 'react-native';
 import {
     Header,
     ListItem
 } from 'react-native-elements';
+import DatePicker from 'react-native-datepicker'
 import CardItem from '../common/CardItem';
 import Input from '../common/Input';
 
@@ -50,10 +51,26 @@ class ContratosForm extends Component {
                 <Text style={styles.datePickerTextStyle}>Selecione a Data:</Text>
                 <CardItem>
                     <View style={styles.container}>
-                        <DatePickerIOS
+                        <DatePicker
+                            style={{ width: 200 }}
+                            date={this.state.date}
                             mode="date"
-                            date={this.state.chosenDate}
-                            onDateChange={this.setDate}
+                            format="DD-MM-YYYY"
+                            confirmBtnText="Confirm"
+                            cancelBtnText="Cancel"
+                            customStyles={{
+                                dateIcon: {
+                                    position: 'absolute',
+                                    left: 0,
+                                    top: 4,
+                                    marginLeft: 0,
+                                },
+                                dateInput: {
+                                    marginLeft: 36
+                                }
+                                // ... You can check the source to find the other keys.
+                            }}
+                            onDateChange={(date) => { this.setState({ date: date }) }}
                         />
                     </View>
                 </CardItem>
@@ -78,6 +95,7 @@ class ContratosForm extends Component {
 const styles = {
     container: {
         flex: 1,
+        alignItems: 'center',
         justifyContent: 'center',
     },
     pickerTextStyle: {
