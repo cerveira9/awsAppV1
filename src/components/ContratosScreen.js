@@ -18,7 +18,7 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 class ContratosScreen extends Component {
 
     static navigationOptions = ({navigation}) => ({
-        tabBarLabel:"ContratosScreen"
+        tabBarLabel:"Contratos"
     });
 
 
