@@ -30,10 +30,10 @@ class SettingsScreen extends Component {
     render() {
         return (
             <View>
-                <Header
+                {/*<Header
                     backgroundColor={'#F8F8FF'} // Color: GhostWhite
                     centerComponent={{ text: 'SETTINGS', style: { color: 'rgba(92, 99,216, 1)', fontSize: 20, fontWeight: 'bold' } }}
-                />
+                />*/}
             </View >
         );
     }
