@@ -11,15 +11,15 @@ import ListaContratos from './src/components/ListaContratos';
 import { TabNavigator } from 'react-navigation';
 
 const TabNav = TabNavigator({
-  Home:{
+  Home: {
     screen:FirstScreen
   },
   ContratosScreen: {
     screen:ContratosScreen
   },
-  SettingsScreen:{
+  SettingsScreen: {
     screen:SettingsScreen
-  },
+  }
 });
 export default TabNav;
 
