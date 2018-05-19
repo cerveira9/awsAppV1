@@ -12,7 +12,19 @@ import {
 class SettingsScreen extends Component {
 
     static navigationOptions = ({navigation}) => ({
-        tabBarLabel:"Settings"
+        tabBarLabel:"Settings",
+        tabBarIcon:({tintColor, focused}) => {
+            if(focused){
+              return(
+                <Image source={require('../img/icons/settings_on.png')} style={{width:26, height:26}} />
+              );
+            }else{
+              return(
+                <Image source={require('../img/icons/settings_off.png')} style={{width:26, height:26}} />
+              );
+            }
+            
+        }
     });
 
     render() {

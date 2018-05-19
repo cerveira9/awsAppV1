@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
     View,
     StyleSheet,
-    Dimensions
+    Dimensions,
+    Image
 } from 'react-native';
 import {
     Header,
@@ -18,7 +19,19 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 class ContratosScreen extends Component {
 
     static navigationOptions = ({navigation}) => ({
-        tabBarLabel:"Contratos"
+        tabBarLabel:"Contratos",
+        tabBarIcon:({tintColor, focused}) => {
+            if(focused){
+              return(
+                <Image source={require('../img/icons/contracts_on.png')} style={{width:26, height:26}} />
+              );
+            }else{
+              return(
+                <Image source={require('../img/icons/contracts_off.png')} style={{width:26, height:26}} />
+              );
+            }
+            
+        }
     });
 
 

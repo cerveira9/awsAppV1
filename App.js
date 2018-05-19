@@ -20,6 +20,13 @@ const TabNav = TabNavigator({
   SettingsScreen: {
     screen:SettingsScreen
   }
-});
+  },
+  {
+    tabBarOptions: {
+      showIcon: true,
+      enableSwipe: true
+  },
+  });
 export default TabNav;
 
+console.disableYellowBox = true;

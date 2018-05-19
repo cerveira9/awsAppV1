@@ -17,7 +17,19 @@ const SCREEN_HEIGHT = Dimensions.get('window').height;
 class FirstScreen extends Component {
 
     static navigationOptions = ({ navigation }) => ({
-        tabBarLabel: "Home"
+        tabBarLabel: "Home",
+        tabBarIcon:({tintColor, focused}) => {
+            if(focused){
+              return(
+                <Image source={require('../img/icons/home_on.png')} style={{width:26, height:26}} />
+              );
+            }else{
+              return(
+                <Image source={require('../img/icons/home_off.png')} style={{width:26, height:26}} />
+              );
+            }
+            
+        }
     });
 
     render() {
