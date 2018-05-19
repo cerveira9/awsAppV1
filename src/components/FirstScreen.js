@@ -15,11 +15,11 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 class FirstScreen extends Component {
-   
-    static navigationOptions = ({navigation}) => ({
-        tabBarLabel:"Home"
+
+    static navigationOptions = ({ navigation }) => ({
+        tabBarLabel: "Home"
     });
-   
+
     render() {
         return (
             <View>
@@ -50,30 +50,15 @@ class FirstScreen extends Component {
                         <View style={styles.textContainer}>
                             <Text style={styles.preDataTextStyle}>
                                 Data aproximada para seu
-                </Text>
+                            </Text>
                             <Text style={styles.preDataTextStyle}>
                                 próximo contrato de U$ X:
-                </Text>
+                            </Text>
                         </View>
                         <View style={styles.textContainer}>
                             <Text style={styles.dateTextStyle}>
                                 01/01/2019
-                </Text>
-                        </View>
-                        <View style={styles.buttonContainer}>
-                            <Button
-                                title="CONTRATOS"
-                                titleStyle={{ fontWeight: 'bold' }}
-                                buttonStyle={{
-                                    backgroundColor: "rgba(92, 99,216, 1)",
-                                    width: 300,
-                                    height: 45,
-                                    borderColor: "transparent",
-                                    borderWidth: 0,
-                                    borderRadius: 30
-                                }}
-                                containerStyle={{ marginTop: 20 }}
-                            />
+                            </Text>
                         </View>
                     </View>
                 </View>
@@ -84,6 +69,7 @@ class FirstScreen extends Component {
 
 const styles = {
     container: {
+        marginTop: 60,
         paddingTop: 25,
         alignItems: 'center',
         justifyContent: 'center',
@@ -111,6 +97,7 @@ const styles = {
         fontSize: 30,
         fontWeight: 'bold',
         color: 'red',
+        paddingTop: 20
     },
     button: {
         alignItems: 'center',
