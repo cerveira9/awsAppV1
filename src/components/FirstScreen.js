@@ -15,14 +15,19 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 class FirstScreen extends Component {
+   
+    static navigationOptions = ({navigation}) => ({
+        tabBarLabel:"Home"
+    });
+   
     render() {
         return (
             <View>
-                <Header
+                {/*<Header
                     backgroundColor={'rgba(92, 99,216, 1)'} // Color: GhostWhite
                     centerComponent={{ text: 'HOME', style: { color: '#F8F8FF', fontSize: 20, fontWeight: 'bold' } }}
                     rightComponent={{ icon: 'settings', color: '#F8F8FF' }}
-                />
+                />*/}
                 <View >
                     <Image
                         style={{

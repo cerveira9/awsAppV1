@@ -7,10 +7,14 @@ import ContratosForm from './src/components/ContratosForm';
 import EditarContratosScreen from './src/components/EditarContratosScreen';
 import ListaContratos from './src/components/ListaContratos';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <AdicionarContratosScreen />
-    );
-  }
-}
+import { TabNavigator } from 'react-navigation';
+
+const TabNav = TabNavigator({
+  Home:{
+    screen:FirstScreen
+  },
+  ContratosScreen: {
+    screen:ContratosScreen
+  },
+});
+export default TabNav;
