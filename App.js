@@ -7,6 +7,7 @@ import ContratosForm from './src/components/ContratosForm';
 import EditarContratosScreen from './src/components/EditarContratosScreen';
 import ListaContratos from './src/components/ListaContratos';
 
+
 import { TabNavigator } from 'react-navigation';
 
 const TabNav = TabNavigator({
@@ -18,3 +19,4 @@ const TabNav = TabNavigator({
   },
 });
 export default TabNav;
+
