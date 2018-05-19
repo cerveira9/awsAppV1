@@ -26,6 +26,10 @@ const TabNav = TabNavigator({
       showIcon: true,
       enableSwipe: true
   },
+  tabBarPosition: 'bottom',
+  style:{
+    height:20,
+  }
   });
 export default TabNav;
 

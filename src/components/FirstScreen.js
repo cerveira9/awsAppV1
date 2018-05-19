@@ -21,11 +21,11 @@ class FirstScreen extends Component {
         tabBarIcon:({tintColor, focused}) => {
             if(focused){
               return(
-                <Image source={require('../img/icons/home_on.png')} style={{width:26, height:26, tintColor: 'rgba(92, 99,216, 1)'}} />
+                <Image source={require('../img/icons/home_on.png')} style={{width:20, height:20, tintColor: 'rgba(92, 99,216, 1)'}} />
               );
             }else{
               return(
-                <Image source={require('../img/icons/home_off.png')} style={{width:26, height:26, tintColor: 'rgba(92, 99,216, 1)'}} />
+                <Image source={require('../img/icons/home_off.png')} style={{width:20, height:20, tintColor: 'rgba(92, 99,216, 1)'}} />
               );
             }
             
