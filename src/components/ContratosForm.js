@@ -86,21 +86,28 @@ class ContratosForm extends Component {
                     <Text style={styles.pickerTextStyle} onPress={this.showActionSheet}>Descrição:</Text>
                     {
                         (Platform.OS === 'ios') ? <ActionSheet
-                            ref={o => this.ActionSheet = o}
-                            title={'Descrição'}
-                            options={['Bônus de Mineração', 'Bônus Residual', 'Valor Total', 'Cancelar']}
-                            cancelButtonIndex={3}
-                            destructiveButtonIndex={3}
-                            onPress={(index) => { /* do something */ }}
-                        /> : <Picker
-                            mode="dropdown"
-                        >
-                                {/* <Picker.Item label="Bônus de Mineração" value="Bônus_de_Mineração" />
-                        <Picker.Item label="Bônus Residual" value="Bônus_Residual" />
-                        <Picker.Item label="Bônus de Equipe" value="Bônus_de_Equipe" />
-                        <Picker.Item label="Bônus de Aceleração" value="Bônus_de_Aceleração" /> */}
-                                <Picker.Item label="Valor Total" value="Valor_Total" />
-                            </Picker>
+                                                    ref={o => this.ActionSheet = o}
+                                                    title={'Descrição'}
+                                                    options={[
+                                                        'Bônus de Mineração',
+                                                        'Bônus Residual',
+                                                        'Bônus de Equipe',
+                                                        'Bônus de Aceleração',
+                                                        'Valor Total',
+                                                        'Cancelar'
+                                                    ]}
+                                                    cancelButtonIndex={5}
+                                                    destructiveButtonIndex={5}
+                                                    onPress={(index) => { /* do something */ }}
+                                                    /> : <Picker
+                                                            mode="dropdown"
+                                                        >
+                                                            <Picker.Item label="Bônus de Mineração" value="Bônus_de_Mineração" />
+                                                            <Picker.Item label="Bônus Residual" value="Bônus_Residual" />
+                                                            <Picker.Item label="Bônus de Equipe" value="Bônus_de_Equipe" />
+                                                            <Picker.Item label="Bônus de Aceleração" value="Bônus_de_Aceleração" />
+                                                            <Picker.Item label="Valor Total" value="Valor_Total" />
+                                                        </Picker>
                     }
 
                 </CardItem>
