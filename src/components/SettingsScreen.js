@@ -10,6 +10,11 @@ import {
 } from 'react-native';
 
 class SettingsScreen extends Component {
+
+    static navigationOptions = ({navigation}) => ({
+        tabBarLabel:"Settings"
+    });
+
     render() {
         return (
             <View>

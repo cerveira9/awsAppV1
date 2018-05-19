@@ -17,6 +17,9 @@ const TabNav = TabNavigator({
   ContratosScreen: {
     screen:ContratosScreen
   },
+  SettingsScreen:{
+    screen:SettingsScreen
+  },
 });
 export default TabNav;
 
