@@ -16,7 +16,7 @@ class ContratosScreen extends Component {
 
     render() {
         return (
-            <View style={{ paddingTop: 15 }}>
+            <View style={{ paddingTop: 30 }}>
                 <View style={styles.listaStyle}>
                     <ListaContratos />
                 </View>
