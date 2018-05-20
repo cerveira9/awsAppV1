@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-
 import {
     View,
     StyleSheet,
-    Dimensions,
-    Image
+    Dimensions
 } from 'react-native';
-import {
-    Header,
-    Button,
-    ListItem
-} from 'react-native-elements';
+import { Button } from 'react-native-elements';
 import CardItem from '../common/CardItem';
 import Input from '../common/Input';
 import ListaContratos from './ListaContratos';
@@ -19,37 +13,10 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 class ContratosScreen extends Component {
-    // static navigationOptions = ({navigation}) => ({
-    //     tabBarLabel:"Contratos",
-    //     tabBarIcon:({tintColor, focused}) => {
-    //         if(focused){
-    //           return(
-    //             <Image source={require('../img/icons/contracts_on.png')} style={{width:20, height:20, tintColor: 'rgba(92, 99,216, 1)'}} />
-    //           );
-    //         }else{
-    //           return(
-    //             <Image source={require('../img/icons/contracts_off.png')} style={{width:20, height:20, tintColor: 'rgba(92, 99,216, 1)'}} />
-    //           );
-    //         }
-            
-    //     }
-    // });
-
 
     render() {
         return (
-            <View style={{
-                backgroundColor: 'white',
-                flex: 1,
-                position: 'absolute',
-                width: SCREEN_WIDTH,
-                height: SCREEN_HEIGHT,
-                justifyContent: 'center',
-            }}>
-                {/*<Header
-                    backgroundColor={'#F8F8FF'} // Color: GhostWhite
-                    centerComponent={{ text: 'CONTRATOS', style: { color: 'rgba(92, 99,216, 1)', fontSize: 20, fontWeight: 'bold' } }}
-                />*/}
+            <View style={{ paddingTop: 15 }}>
                 <View style={styles.listaStyle}>
                     <ListaContratos />
                 </View>
