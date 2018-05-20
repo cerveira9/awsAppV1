@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
   // Tab text
   tabText: {
     color: '#FFFFFF',
-    fontFamily: 'Avenir',
     fontWeight: 'bold',
     textAlign: 'center',
   },
