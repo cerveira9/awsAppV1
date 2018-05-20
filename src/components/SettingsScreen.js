@@ -7,8 +7,12 @@ import {
 import {
     Text,
     View,
-    Image
+    Image,
+    Dimensions
 } from 'react-native';
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
+const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 class SettingsScreen extends Component {
 
@@ -30,7 +34,15 @@ class SettingsScreen extends Component {
 
     render() {
         return (
-            <View style={{ marginTop: 15 }}>
+            <View style={{
+                backgroundColor: 'white',
+                flex: 1,
+                position: 'absolute',
+                width: SCREEN_WIDTH,
+                height: SCREEN_HEIGHT,
+                justifyContent: 'center',
+                marginTop: 10
+            }}>
                 {/*<Header
                     backgroundColor={'#F8F8FF'} // Color: GhostWhite
                     centerComponent={{ text: 'SETTINGS', style: { color: 'rgba(92, 99,216, 1)', fontSize: 20, fontWeight: 'bold' } }}
@@ -39,5 +51,6 @@ class SettingsScreen extends Component {
         );
     }
 }
+
 
 export default SettingsScreen;

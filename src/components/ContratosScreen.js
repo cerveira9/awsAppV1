@@ -16,6 +16,7 @@ import Input from '../common/Input';
 import ListaContratos from './ListaContratos';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
+const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 class ContratosScreen extends Component {
     // static navigationOptions = ({navigation}) => ({
@@ -37,7 +38,14 @@ class ContratosScreen extends Component {
 
     render() {
         return (
-            <View style={{ marginTop: 15 }}>
+            <View style={{
+                backgroundColor: 'white',
+                flex: 1,
+                position: 'absolute',
+                width: SCREEN_WIDTH,
+                height: SCREEN_HEIGHT,
+                justifyContent: 'center',
+            }}>
                 {/*<Header
                     backgroundColor={'#F8F8FF'} // Color: GhostWhite
                     centerComponent={{ text: 'CONTRATOS', style: { color: 'rgba(92, 99,216, 1)', fontSize: 20, fontWeight: 'bold' } }}
