@@ -1,4 +1,3 @@
-import React from 'react';
 import FirstScreen from './src/components/FirstScreen';
 import SettingsScreen from './src/components/SettingsScreen';
 import ContratosScreen from './src/components/ContratosScreen';
@@ -32,6 +31,7 @@ const TabNav = TabNavigator({
     height:20,
   }
   });
+  
 export default TabNav;
 
-console.disableYellowBox = true;
+//console.disableYellowBox = true;
