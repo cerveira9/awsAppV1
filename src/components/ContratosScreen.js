@@ -37,7 +37,7 @@ class ContratosScreen extends Component {
 
     render() {
         return (
-            <View>
+            <View style={{ marginTop: 15 }}>
                 {/*<Header
                     backgroundColor={'#F8F8FF'} // Color: GhostWhite
                     centerComponent={{ text: 'CONTRATOS', style: { color: 'rgba(92, 99,216, 1)', fontSize: 20, fontWeight: 'bold' } }}
