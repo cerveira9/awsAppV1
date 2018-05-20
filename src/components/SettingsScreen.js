@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import {
     Header,
     Button
@@ -11,21 +12,21 @@ import {
 
 class SettingsScreen extends Component {
 
-    static navigationOptions = ({navigation}) => ({
-        tabBarLabel:"Settings",
-        tabBarIcon:({tintColor, focused}) => {
-            if(focused){
-              return(
-                <Image source={require('../img/icons/settings_on.png')} style={{width:20, height:20, tintColor: 'rgba(92, 99,216, 1)'}} />
-              );
-            }else{
-              return(
-                <Image source={require('../img/icons/settings_off.png')} style={{width:20, height:20, tintColor: 'rgba(92, 99,216, 1)'}} />
-              );
-            }
+    // static navigationOptions = ({navigation}) => ({
+    //     tabBarLabel:"Settings",
+    //     tabBarIcon:({tintColor, focused}) => {
+    //         if(focused){
+    //           return(
+    //             <Image source={require('../img/icons/settings_on.png')} style={{width:20, height:20, tintColor: 'rgba(92, 99,216, 1)'}} />
+    //           );
+    //         }else{
+    //           return(
+    //             <Image source={require('../img/icons/settings_off.png')} style={{width:20, height:20, tintColor: 'rgba(92, 99,216, 1)'}} />
+    //           );
+    //         }
             
-        }
-    });
+    //     }
+    // });
 
     render() {
         return (
