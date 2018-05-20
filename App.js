@@ -9,6 +9,7 @@ import ListaContratos from './src/components/ListaContratos';
 
 
 import { TabNavigator } from 'react-navigation';
+import CotacaoApi from './src/components/CotacaoApi';
 
 const TabNav = TabNavigator({
   Home: {
