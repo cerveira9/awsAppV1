@@ -1,29 +1,31 @@
 import React from 'react';
 import { StyleSheet, Text, View, Component } from 'react-native';
-import Tabs from './src/components/Tabs';
+import { TabNavigator, StackNavigator } from 'react-navigation';
+
 import FirstScreen from './src/components/FirstScreen';
 import SettingsScreen from './src/components/SettingsScreen';
 import ContratosScreen from './src/components/ContratosScreen';
+import AdicionarContratosScreen from './src/components/AdicionarContratosScreen';
+import EditarContratosScreen from './src/components/EditarContratosScreen';
 
 export default class App extends React.Component {
 
   render() {
+    const MainNavigator = TabNavigator({
+      first: { screen: FirstScreen },
+      contratos: {
+        screen: StackNavigator({
+          contratosTela: { screen: ContratosScreen },
+          adicionar: { screen: AdicionarContratosScreen },
+          editar: { screen: EditarContratosScreen }
+        })
+      },
+      settings: { screen: SettingsScreen},
+    });
+
     return (
       <View style={styles.container}>
-        <Tabs>
-          {/* First tab */}
-          <View title="HOME">
-            <FirstScreen />
-          </View>
-          {/* Second tab */}
-          <View title="CONTRATOS">
-            <ContratosScreen />
-          </View>
-          {/* Third tab */}
-          <View title="SETTINGS">
-            <SettingsScreen />
-          </View>
-        </Tabs>
+        <MainNavigator />
       </View>
     );
   }
