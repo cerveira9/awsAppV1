@@ -21,6 +21,8 @@ class ContratosScreen extends Component {
                 <Button
                     title='Novo Contrato'
                     onPress={() => navigation.navigate('adicionar')}
+                    backgroundColor="rgba(0,0,0,0)"
+                    color="rgba(0, 122, 255, 1)"
                 />
             ),
             style: {
