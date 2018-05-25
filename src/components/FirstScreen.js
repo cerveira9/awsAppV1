@@ -85,7 +85,7 @@ class FirstScreen extends Component {
 
 const styles = {
     container: {
-        marginTop: 10,
+        marginTop: 25,
         paddingTop: 25,
         alignItems: 'center',
         justifyContent: 'center',
