@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
     View,
     StyleSheet,
-    Dimensions
+    Dimensions,
+    Platform
 } from 'react-native';
 import { Button } from 'react-native-elements';
 import CardItem from '../common/CardItem';
@@ -13,10 +14,24 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 class ContratosScreen extends Component {
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: 'Contratos',
+            headerRight: (
+                <Button
+                    title='Novo Contrato'
+                    onPress={() => navigation.navigate('adicionar')}
+                />
+            ),
+            style: {
+                marginTop: Platform.OS === 'android' ? 24 : 0
+            }
+        };
+    }
 
     render() {
         return (
-            <View style={{ paddingTop: 30 }}>
+            <View style={{ paddingTop: 5 }}>
                 <View style={styles.listaStyle}>
                     <ListaContratos />
                 </View>
@@ -26,7 +41,7 @@ class ContratosScreen extends Component {
                         placeholder='40'
                     />
                 </CardItem>
-                <View style={styles.buttonContainer}>
+                {/* <View style={styles.buttonContainer}>
                     <Button
                         title="ADICIONAR"
                         titleStyle={{ fontWeight: 'bold' }}
@@ -40,7 +55,7 @@ class ContratosScreen extends Component {
                         }}
                         containerStyle={{ marginTop: 20 }}
                     />
-                </View>
+                </View> */}
             </View>
         );
     }

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
     View,
     Dimensions,
-    Image
+    Image,
+    Platform
 } from 'react-native';
 import {
     Header,
@@ -15,14 +16,22 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 class AdicionarContratosScreen extends Component {
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: 'Novo Contrato',
+            style: {
+                marginTop: Platform.OS === 'android' ? 24 : 0
+            }
+        };
+    }
     render() {
         return (
             <View>
-                <Header
+                {/* <Header
                     backgroundColor={'#F8F8FF'} // Color: GhostWhite
                     centerComponent={{ text: 'ADICIONAR', style: { color: 'rgba(92, 99,216, 1)', fontSize: 20, fontWeight: 'bold' } }}
                     leftComponent={{ icon: 'keyboard-arrow-left', color: 'rgba(92, 99,216, 1)' }}
-                />
+                /> */}
                 <View>
                     <Image
                         style={{
