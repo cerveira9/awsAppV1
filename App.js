@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Component } from 'react-native';
-import { TabNavigator, StackNavigator } from 'react-navigation';
+import { createBottomTabNavigator, StackNavigator } from 'react-navigation';
 
 import FirstScreen from './src/components/FirstScreen';
 import SettingsScreen from './src/components/SettingsScreen';
@@ -11,7 +11,7 @@ import EditarContratosScreen from './src/components/EditarContratosScreen';
 export default class App extends React.Component {
 
   render() {
-    const MainNavigator = TabNavigator({
+    const MainNavigator = createBottomTabNavigator({
       first: { screen: FirstScreen },
       contratos: {
         screen: StackNavigator({
