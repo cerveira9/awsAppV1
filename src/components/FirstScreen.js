@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
     Header,
-    Button
+    Button,
+    Icon
 } from 'react-native-elements';
 import {
     Text,
@@ -16,31 +17,16 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
 class FirstScreen extends Component {
-
-    // static navigationOptions = ({ navigation }) => ({
-    //     tabBarLabel: "Home",
-    //     tabBarIcon: ({ tintColor, focused }) => {
-    //         if (focused) {
-    //             return (
-    //                 <Image source={require('../img/icons/home_on.png')} style={{ width: 20, height: 20, tintColor: 'rgba(92, 99,216, 1)' }} />
-    //             );
-    //         } else {
-    //             return (
-    //                 <Image source={require('../img/icons/home_off.png')} style={{ width: 20, height: 20, tintColor: 'rgba(92, 99,216, 1)' }} />
-    //             );
-    //         }
-
-    //     }
-    // });
+    static navigationOptions = {
+        title: 'Home',
+        tabBarIcon: ({ tintColor }) => {
+            return <Icon name="home" size={30} color={tintColor} />;
+        }
+    }
 
     render() {
         return (
             <View>
-                {/*<Header
-                    backgroundColor={'rgba(92, 99,216, 1)'} // Color: GhostWhite
-                    centerComponent={{ text: 'HOME', style: { color: '#F8F8FF', fontSize: 20, fontWeight: 'bold' } }}
-                    rightComponent={{ icon: 'settings', color: '#F8F8FF' }}
-                />*/}
                 <View >
                     <Image
                         style={{

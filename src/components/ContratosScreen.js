@@ -3,7 +3,8 @@ import {
     View,
     StyleSheet,
     Dimensions,
-    Platform
+    Platform,
+    Image
 } from 'react-native';
 import { Button } from 'react-native-elements';
 import CardItem from '../common/CardItem';
@@ -16,7 +17,13 @@ const SCREEN_HEIGHT = Dimensions.get('window').height;
 class ContratosScreen extends Component {
     static navigationOptions = ({ navigation }) => {
         return {
-            title: 'Contratos',
+            tabBarLabel: 'Contratos',
+            tabBarIcon: ({ tintColor }) => (
+                <Image 
+                    source={require('../img/icons/contracts_on.png')}  
+                />
+                    
+            ),
             headerRight: (
                 <Button
                     title='Novo Contrato'
