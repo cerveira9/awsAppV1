@@ -15,12 +15,12 @@ export default class App extends React.Component {
       first: { screen: FirstScreen },
       contratos: {
         screen: StackNavigator({
-          contratosTela: { screen: ContratosScreen },
+          contratos: { screen: ContratosScreen },
           adicionar: { screen: AdicionarContratosScreen },
           editar: { screen: EditarContratosScreen }
         })
       },
-      settings: { screen: SettingsScreen},
+      settings: { screen: SettingsScreen },
     });
 
     return (
